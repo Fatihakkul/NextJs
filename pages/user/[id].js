@@ -1,5 +1,5 @@
 import Axios from 'axios'
-
+import secretkey from '../secretKey'
 function User({ user }){
     return(
         <div>
@@ -13,7 +13,7 @@ export async function getStaticPaths() {
         {
           headers: {
             "secret-key":
-              "$2b$10$WS6tmgDo3UejFF/2zWriU.WPsdAGq1BWkEVd6YyNFlZgmUNRWDoHa",
+             secretkey,
           },
         }
       );
@@ -33,7 +33,7 @@ export async function getStaticProps({params}) {
       {
         headers: {
           "secret-key":
-            "$2b$10$WS6tmgDo3UejFF/2zWriU.WPsdAGq1BWkEVd6YyNFlZgmUNRWDoHa",
+            secretkey,
         },
       }
     );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import unfetch from "isomorphic-unfetch";
 import Link from "next/link";
 import Axios from "axios";
+import secretKey from './secretKey'
 import styles from "./index.module.css";
 
 function HomePage({ user }) {
@@ -20,7 +21,7 @@ function HomePage({ user }) {
       let res = await Axios.get(`https://api.jsonbin.io/b/${element.id}`, {
         headers: {
           "secret-key":
-            "$2b$10$WS6tmgDo3UejFF/2zWriU.WPsdAGq1BWkEVd6YyNFlZgmUNRWDoHa",
+           secretKey,
         },
       });
       let users = { name: res.data.name, id: element.id , role : res.data.role , number : res.data.number};
@@ -42,7 +43,7 @@ function HomePage({ user }) {
       {
         headers: {
           "secret-key":
-            "$2b$10$WS6tmgDo3UejFF/2zWriU.WPsdAGq1BWkEVd6YyNFlZgmUNRWDoHa",
+            secretKey,
           "collection-id": "5f6a90b27243cd7e8241a876",
         },
       }
@@ -102,7 +103,7 @@ export async function getServerSideProps() {
     {
       headers: {
         "secret-key":
-          "$2b$10$WS6tmgDo3UejFF/2zWriU.WPsdAGq1BWkEVd6YyNFlZgmUNRWDoHa",
+         secretKey,
       },
     }
   );
