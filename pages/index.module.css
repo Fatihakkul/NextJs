@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+.updateButton {
+    margin-top: 10px;
+    background-color: #c662f5;
+    border-color: #c662f5;
+    border-width: 2px;
+    border-style: solid;
+    width: 10%;
+    padding-top: 5px;
+    padding-bottom: 5px
+}
+.listCont {
+    width: 100%;
+    border-color: #c662f5;
+    border-style: solid;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 5px;
+    margin-top: 25px;
+}
+.infoButton  {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: #c662f5;
+    border-color: #c662f5;
+}
+.listDiv {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 50px;
+    padding-top: 50px;
+   
+}
+.list {
+    display: flex;
+    
+    flex-direction: column;
+    width: 50%
+}
+
